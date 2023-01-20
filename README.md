@@ -1,6 +1,7 @@
 # Rabbit-CSS-Animation
 **css 3D animation**
-**Note: Animation will be added soon...
+
+**Note: Animation will be added soon...**
 
 (<img width="960" alt="Rabbits" src="https://user-images.githubusercontent.com/121185931/213720033-0655bb13-5cc0-48c5-a8b3-a27b8166df7b.png">)
 
