@@ -8,10 +8,17 @@
             display: flex;
         }
         body{
-            width: 100%;
-            height: 100vh;
+            width: 1280px;
+            height: 570px;
             position: relative;
             overflow: hidden;
+        }
+        main{
+            width: 1270px;
+            height: 580px;
+            border: 10px groove #81818166;
+            position: relative;
+            margin: auto;
         }
         .rabbit-right,
         .rabbit-left
@@ -276,8 +283,8 @@
         
         /********************** City Start ********************/
         .city{
-            width: 100%;
-            height: 30%;
+            width: 1250px;
+            height: 173px;
             background-color: rgba(45, 45, 45, 0.735);
             position: absolute;
             top: 0;left: 0;
@@ -287,7 +294,7 @@
             position: absolute;
         }
         .city>div:nth-of-type(1){
-            width: 10.3%;
+            width: 132px;
             background-color: rgb(52, 52, 52);
             top: 0;left: 0;
         }
@@ -338,7 +345,7 @@
             top: 0px;left: 60px;
         }
         .city>div:nth-of-type(2){
-            width: 12%;height: 100%;
+            width: 155px;height: 100%;
             background: rgb(57, 57, 57);
             top: 0;left: 12%;
         }
@@ -498,7 +505,7 @@
             transform: scale(.5);
         }
         .city>div:nth-of-type(4){
-            width: 12%;
+            width: 155px;
             background-color: rgb(52, 52, 52);
             top: 0;right: 0;
         }
@@ -573,7 +580,7 @@
             top: -45px;left: 0px;
         }
         .city>div:nth-of-type(5){
-            width: 10%;
+            width: 128px;
             background-color: rgb(52, 52, 52);
             top: 0;right: 14%;
         }
@@ -635,8 +642,8 @@
             left: 35px;
         }
         .ribbon{
-            width: 100%;
-            height: 2%;
+            width:  1250px;
+            height:12px;
             background-color: rgb(6, 64, 0);
             position: absolute;
             top: 30%;
@@ -647,15 +654,14 @@
 
         /********************** Garden Start ********************/
         .garden{
-            width: 100%;
-            height: 30%;
+            width:  1250px;
+            height: 173px;
             background-color: rgb(53, 70, 53);
             position: absolute;
             top: 32%;left: 0; 
         }
         .garden>div{
             position: absolute;
-            /* overflow: hidden; */
         }
         .garden>div:nth-of-type(1){
             top: 0px;
@@ -914,8 +920,8 @@
 
         /********************** Room Start ********************/
         .room{
-            width: 100%;
-            height: 45%;
+            width:  1250px;
+            height: 250px;
             background-color: rgb(133 133 133);
             position: absolute;
             bottom: 0;
@@ -925,17 +931,18 @@
         .sofa-right,
         .sofa-left
         {
-            width: 50%;
+            width: 400px;
             height: auto;
             position: absolute;
-            bottom: -15px;
+            bottom: 20px;
+            z-index: 999;
         }
         .sofa-right{
-            right: -60px;
+            right: 0px;
             transform: scale(0.8);
         }
         .sofa-left{
-            left: -70px;
+            left: 0px;
             transform: scale(0.75) rotateY(180deg);
         }
 
@@ -946,7 +953,7 @@
             background-color: #560056;
             transform-origin: bottom left;
             border-radius: 10px;
-            transform: skewX(66.5deg);
+            transform: skewX(62deg);
             position: absolute;
             bottom: 100px;
             right: 0px;
@@ -956,46 +963,22 @@
         }
         .sofa-right>div:nth-of-type(2),
         .sofa-left>div:nth-of-type(2){
-            width: 142px;
+            width: 133px;
             height: 92px;
             background-color: #2a2a2a;
             transform-origin: top;
-            transform: skewX(66.5deg) rotatez(90deg);
+            transform: skewX(62.5deg) rotatez(70deg);
             position: absolute;
-            bottom: 76px;
-            right: 368px;
-        }
-        .sofa-right>div:nth-of-type(3),
-        .sofa-left>div:nth-of-type(3){
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0px 99px 57px 0;
-            position: absolute;
-            top: -242px;
-            left: -57px;
-            z-index: 5;
-            border-color: transparent rgb(133 133 133) transparent transparent;
-        }
-        .sofa-right>div:nth-of-type(4),
-        .sofa-left>div:nth-of-type(4){
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0px 90px 45px 0;
-            position: absolute;
-            top: -100px;
-            left: 269px;
-            z-index: 5;
-            border-color: transparent #2a2a2a transparent transparent;
+            bottom: 72px;
+            right: 301px;
         }
         .sofa-right>div:nth-of-type(5),
         .sofa-left>div:nth-of-type(5){
-            width: 278px;
+            width: 230px;
             height: 44px;
             position: absolute;
-            top: -100px;
-            left: 356px;
+            top: -101px;
+            left: 166px;
             z-index: 5;
             background-color: #2a2a2a;
         }
@@ -1016,26 +999,26 @@
         }
         .sofa-right>div:nth-of-type(6),
         .sofa-left>div:nth-of-type(6){
-            top: -362px;
-            left: 22px;
+            top: -357px;
+            left: -137px;
             height: 230px;
         }
         .sofa-right>div:nth-of-type(7),
         .sofa-left>div:nth-of-type(7){
             top: -329px;
-            left: 39px;
+            left: -125px;
             height: 25px;
             width: 272px;
         }
         .sofa-right>div:nth-of-type(8),
         .sofa-left>div:nth-of-type(8){
-            top: -95px;
-            left: 344px;
+            top: -125px;
+            left: 149px;
         }
         .sofa-right>div:nth-of-type(9),
         .sofa-left>div:nth-of-type(9){
-            top: -72px;
-            left: 608px;
+            top: -125px;
+            left: 371px;
         }
         .sofa-right>div:nth-of-type(10),
         .sofa-left>div:nth-of-type(10){
@@ -1049,6 +1032,7 @@
             box-shadow: inset 2px 1px 0px 18px #560056;
             border-radius: 10px;
             border-bottom: 4px solid#2a2a2a;
+            z-index: 100;
         }
         .sofa-left>div:nth-of-type(10){
             box-shadow: inset 2px 1px 0px 18px #00225b;
@@ -1060,7 +1044,7 @@
             position: absolute;
             background-color:rgb(62 62 62 / 73%);
             top: -307px;
-            left: 34px;
+            left: -121px;
         }
         .table{
             width: 20%;
@@ -1103,9 +1087,9 @@
             width: 0;
             height: 0;
             border-style: solid;
-            border-width: 1px 55px 66px 0;
+            border-width: 3px 55px 85px 0;
             position: absolute;
-            top: 28px;
+            top: 26px;
             left: -209px;
             z-index: 5;
             border-color: transparent rgb(133 133 133) transparent transparent;
@@ -1225,8 +1209,8 @@
             left: -15px;
         }
         .glass-right{
-            top: -27px;
-            right: 453px;
+            top: -61px;
+            right: 434px;
             width: 3px;
             height: 38px;
             background: #fffff8;
@@ -1266,5 +1250,6 @@
         .glass-left{
             left: 314px;
             top: -20px;
+            z-index: 1000;
         }
         /********************** Room End ********************/
