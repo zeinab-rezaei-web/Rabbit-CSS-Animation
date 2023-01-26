@@ -1,8 +1,6 @@
 # Rabbit-CSS-Animation
 **css 3D animation**
 
-**Note: Animation will be added soon...**
-
 - [Demo of this Project](https://zeinab-rezaei-web.github.io/Rabbit-CSS-Animation/)
 
 https://user-images.githubusercontent.com/121185931/214777482-602d7e97-4b34-41d7-af26-91d8e17408f7.mp4
