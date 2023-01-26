@@ -38,20 +38,82 @@
         }
         .rabbit-right>div,
         .rabbit-left>div{
-            position: relative;
+            position: absolute;
         }
         /******************** Rabbit Body Start *******************/
         .rabbit-right-body,
         .rabbit-left-body{
             width: 215px;
             height: 240px;
-            transform: translate(100px, -60px) rotate(14deg);
+            transform: rotate(14deg);
         }
         .rabbit-left-body>div,
         .rabbit-right-body>div{
             position: absolute;
         }
+        .rabbit-right-body{
+            animation: anim-body-r 6s infinite linear;
+            bottom: 50px;
+        }
+        .rabbit-left-body{
+            bottom: 10px;
+            animation: anim-body-l 6s infinite linear;
 
+        }
+        @keyframes anim-body-l{
+            2.7% {transform: translate(0px, 0px) scaleY(1);}
+            3.6% {transform: translate(1px, 0px) scaleY(1);}
+            5.4% {transform: translate(3px, 1px) scaleY(1);}
+            9% {transform: translate(2px, -2px) scaleY(1);}
+            17.1% {transform: translate(3px, 0px) scaleY(1);}
+            18.9% {transform: translate(2px, 0px) scaleY(1);}
+            20.7% {transform: translate(0px, 0px) scaleY(1);}
+            22.5% {transform: translate(-1px, -1px) scaleY(1);}
+            24.3% {transform: translate(-4px, -1px) scaleY(1.1);}
+            27.9% {transform: translate(-5px, -1px) scaleY(1.1);}
+            40.5% {transform: translate(-2px, 0px) scaleY(1.05);}
+            44.1% {transform: translate(1px, 0px) scaleY(1);}
+            45.9% {transform: translate(3px, -2px) scaleY(1);}
+            47.7% {transform: translate(4px, -3px) scaleY(1);}
+            65.7% {transform: translate(6px, 0px) scaleY(1);}
+            67.5% {transform: translate(8px, 4px) scaleY(1);}
+            69.3% {transform: translate(8px, -3px) scaleY(1.05);}
+            71.1% {transform: translate(8px, -10px) scaleY(1.1);}
+            73.8% {transform: translate(14px, 3px) scaleY(1);}
+            76.5% {transform: translate(11px, 31px) scaleY(1.3);}
+            79.2% {transform: translate(13px, 5px) scaleY(1);}
+            81.9% {transform: translate(10px, 20px) scaleY(1.2);}
+            84.6% {transform: translate(15px, 7px) scaleY(1);}
+            84.4% {transform: translate(25px, 30px) scaleY(1);}
+            86.2% {transform: translate(30px, 56px) scaleY(1);}
+            90% {transform: translate(36px, 56px) scaleY(0.9);}
+            100% {transform: translate(38px, 59px) scaleY(0.9);}
+        }
+        @keyframes anim-body-r{
+            2.7% {transform: translate(0, 0) scale(1, 1) rotate(0deg);}
+            3.6% {transform: translate(2px, 1px) scale(1, 1) rotate(0deg);}
+            5.4% {transform: translate(1px, 1px) scale(0.99, 1) rotate(0deg);}
+            27.9% {transform: translate(-2px, 0px) scale(1, 1) rotate(0deg);}
+            29.7% {transform: translate(-1px, 0px) scale(1, 1) rotate(0deg);}
+            31.5% {transform: translate(-5px, 1px) scale(1, 1) rotate(0deg);}
+            33.3% {transform: translate(-7px, 0px) scale(1, 1) rotate(0deg);}
+            38.7% {transform: translate(-9px, 0px) scale(1, 1) rotate(0deg);}
+            50.4% {transform: translate(-3px, 0px) scale(1, 1) rotate(0deg);}
+            52.2% {transform: translate(5px, 1px) scale(1, 1) rotate(0deg);}
+            54% {transform: translate(-3px, 1px) scale(1, 1) rotate(0deg);}
+            55.8% {transform: translate(-5px, -8px) scale(0.95, 1.1) rotate(0deg);}
+            57.6% {transform: translate(-6px, 1px) scale(0.95, 1) rotate(0deg);}
+            72.9% {transform: translate(0px, 1px) scale(1, 1) rotate(0deg);}
+            74.7% {transform: translate(2px, 1px) scale(1, 1) rotate(0deg);}
+            76.5% {transform: translate(7px, -3px) scale(0.95, 1) rotate(5deg);}
+            87.3% {transform: translate(6px, 0px) scale(0.97, 1) rotate(7deg);}
+            88.2% {transform: translate(7px, -8px) scale(0.97, 1) rotate(12deg)}
+            81.9% {transform: translate(4px, 0px) scale(0.95, 1) rotate(18deg);}
+            84.6% {transform: translate(4px, 0px) scale(0.95, 1) rotate(20deg);}
+            87.3% {transform: translate(7px, -10px) scale(1, 1) rotate(0deg);}
+            92.7% {transform: rotate(5deg) translate(3px, 4px) scale(1, 1);}
+            100% {transform: translate(6px, -10px) scale(1, 1) rotate(0deg);}
+        }
         .rabbit-right-belly,
         .rabbit-left-belly{
             width: 200px;
@@ -61,16 +123,27 @@
         }
         .rabbit-right-belly::before,
         .rabbit-left-belly::before{
-            width: 78%;
-            height: 85%;
+            width: 67%;
+            height: 80%;
             background-color: #f9edbe;
             position: absolute;
             transform: translate(0px, 29px);
             border-radius: 50%;
         }
         .rabbit-left-belly::before{
-            transform: translate(-10px, 26px) rotate(-47deg);
+            transform: translate(-10px, 26px) rotate(-26deg);
             border-radius: 100% 50% 100% 50%;
+        }
+        .rabbit-right-belly::after,
+        .rabbit-left-belly::after{
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #7373733b;
+            position: absolute;
+            bottom: 55px;
+            left: 27%;
+            z-index: 100;
         }
         .rabbit-right-hand-right,
         .rabbit-left-hand-right,
@@ -85,9 +158,52 @@
             height: 100px;
             position: relative;
         }
+		 .rabbit-left-hand-right{
+			 animation: anim-hand-r 6s infinite linear;
+		 }
+		 @keyframes anim-hand-r{
+			4.5% {transform: rotate(24deg) translate(0, 0);}
+            5.4% {transform: rotate(24deg) translate(3px, 0px);}
+            7.2% {transform: rotate(24deg) translate(4px, -1px);}
+            9% {transform: rotate(22deg) translate(5px, -1px);}
+            17.1% {transform: rotate(22deg) translate(5px, 1px);}
+            18.9% {transform: rotate(23deg) translate(7px, -2px);}
+            20.7% {transform: rotate(24deg) translate(8px, -5px);}
+            22.5% {transform: rotate(17deg) translate(12px, -5px);}
+            24.3% {transform: rotate(11deg) translate(17px, -5px);}
+            26.1% {transform: rotate(6deg) translate(19px, -6px);}
+            27.9% {transform: rotate(2deg) translate(21px, -8px);}
+            29.7% {transform: rotate(0deg) translate(22px, -9px);}
+            31.5% {transform: rotate(0deg) translate(23px, -12px);}
+            33.3% {transform: rotate(-1deg) translate(22px, -12px);}
+            34.2% {transform: rotate(-1deg) translate(22px, -12px);}
+            36.9% {transform: rotate(1deg) translate(23px, -8px);}
+            38.7% {transform: rotate(4deg) translate(22px, -8px);}
+            40.5% {transform: rotate(14deg) translate(17px, -6px);}
+            42.3% {transform: rotate(21deg) translate(10px, -2px);}
+            44.1% {transform: rotate(23deg) translate(7px, -2px);}
+            45.9% {transform: rotate(23deg) translate(5px, -2px);}
+            47.7% {transform: rotate(23deg) translate(6px, -2px);}
+            65.7% {transform: rotate(22deg) translate(5px, -1px);}
+            69.3% {transform: rotate(35deg) translate(9px, 1px);}
+            71.1% {transform: rotate(29deg) translate(14px, -3px);}
+            73.8% {transform: rotate(25deg) translate(16px, 0px);}
+            75.6% {transform: rotate(25deg) translate(16px, 0px);}
+            79.2% {transform: rotate(25deg) translate(17px, 0px);}
+            83.7% {transform: rotate(27deg) translate(17px, 0px);}
+            84.6% {transform: rotate(27deg) translate(17px, 4px);}
+            84.4% {transform: rotate(28deg) translate(44px, 14px);}
+            86.2% {transform: rotate(20deg) translate(41px, 19px);}
+            100% {transform: rotate(20deg) translate(45px, 20px);}
+        }
+	  
         .rabbit-right-hand-right,
         .rabbit-left-hand-right{
-            transform: translate(110px, 90px);
+            position: absolute;
+			top: 62px;
+			z-index: 100;
+			left: 54px;
+			transform: scale(1.2) rotate(54deg);
         }
         .rabbit-right-hand-right::after,
         .rabbit-left-hand-right::after,
@@ -115,11 +231,28 @@
             transform: rotate(-11deg) translate(47px, 9px);
             z-index: 1;
         }
+        /* .rabbit-left-hand-right::before{
+            background-color: #ece1b4;
+        } */
         .rabbit-right-hand-left,
         .rabbit-left-hand-left{
             transform: rotatey(180deg) rotate(-132deg) translate(-56px , 76px);
             z-index: -1;
         }
+				 .rabbit-left-hand-right::before{
+			 width: 47px;
+			 height: 20px;
+			 top: 10px;
+			 left: 22px;
+			 transform: rotate(-11deg) !important;
+		 }
+		 .rabbit-left-hand-right::after{
+			 width: 53px;
+			 height:25px;
+			 left: 48px;
+			 top: -13px;
+			 transform: rotate(-45deg) !important;
+		 }
         .rabbit-right-leg-left,
         .rabbit-left-leg-left{
             transform: rotatey(0deg) rotate(-10deg) translate(-46px , 70px);
@@ -152,39 +285,256 @@
             transform: translate(10px, 35px);
         }
         /********************** Rabbit Body End ********************/
-
-
         /********************** Rabbit Face Start ********************/
         .rabbit-right-face,
         .rabbit-left-face{
-            width: 147px;
-            height: 106px;
-            transform: translate(172px, -17px) rotate(25deg);
+            width: 140px;
+            height: 112px;
+            transform: rotate(25deg);
             background-color: #ece1b4;
-            border-radius: 74px 80px 10px 32px;
+            border-radius: 74px 80px 43px 48px;
             z-index: 2;
+        }
+        .rabbit-left-face{
+            left: 30px;top: 55px;
+            animation: anim-face-l 6s linear infinite;
+        }
+        .rabbit-right-face{
+            animation: anim-face-r 6s linear infinite;
+            left: 47px;
+            top: 32px;
+        }
+        @keyframes anim-face-l{
+            2.7% {transform: translate(0px, 0px) rotate(0deg);}
+            3.6% {transform: translate(1px, 2px) rotate(0deg);}
+            5.4% {transform: translate(2px, 4px) rotate(0deg);}
+            7.2% {transform: translate(3px, 2px) rotate(0deg);}
+            8.1% {transform: translate(3px, 2px) rotate(0deg);}
+            9% {transform: translate(3px, 1px) rotate(0deg);}
+            17.1% {transform: translate(2px, 4px) rotate(0deg);}
+            18.9% {transform: translate(1px, 2px) rotate(0deg);}
+            19.8% {transform: translate(1px, 2px) rotate(0deg);}
+            20.7% {transform: translate(0px, 1px) rotate(0deg);}
+            22.5% {transform: translate(0px, -1px) rotate(0deg);}
+            24.3% {transform: translate(-1px, -4px) rotate(0deg);}
+            27.9% {transform: translate(-2px, -7px) rotate(0deg);}
+            29.7% {transform: translate(-2px, -3px) rotate(-2deg);}
+            40.5% {transform: translate(-1px, -1px) rotate(0deg);}
+            42.3% {transform: translate(0px, 1px) rotate(0deg);}
+            44.1% {transform: translate(1px, 2px) rotate(0deg);}
+            45.9% {transform: translate(6px, 2px) rotate(0deg);}
+            47.7% {transform: translate(6px, -1px) rotate(1deg);}
+            49.5% {transform: translate(6px, -2px) rotate(1deg);}
+            65.7% {transform: translate(9px, 8px) rotate(0deg);}
+            68.4% {transform: translate(9px, 8px) rotate(5deg);}
+            69.3% {transform: translate(8px, 8px) rotate(-3deg);}
+            71.1% {transform: translate(29px, 31px) rotate(-30deg);}
+            73.8% {transform: translate(18px, 45px) rotate(-3deg);}
+            76.5% {transform: translate(16px, 42px) rotate(-3deg);}
+            79.2% {transform: translate(16px, 51px) rotate(-3deg);}
+            81.9% {transform: translate(11px, 40px) rotate(-3deg);}
+            84.6% {transform: translate(21px, 58px) rotate(-3deg);}
+            84.4% {transform: translate(24px, 64px) rotate(-3deg);}
+            86.2% {transform: translate(-2px, 66px) rotate(-2deg);}
+            90% {transform: translate(-4px, 71px) rotate(-3deg);}
+            100% {transform: translate(-7px, 71px) rotate(-7deg);}
+        }
+        @keyframes anim-face-r{
+            4.5% {transform: translate(0, 0) rotate(0deg) scale(1, 1);}
+            5.4% {transform: translate(0px, -1px) rotate(0deg) scale(1, 1);}
+            7.2% {transform: translate(-1px, -1px) rotate(0deg) scale(1, 1);}
+            12.6% {transform: translate(0px, -1px) rotate(0deg) scale(1, 1);}
+            26.1% {transform: translate(-7px, 2px) rotate(0deg) scale(1, 1);}
+            27.9% {transform: translate(-17px, 5px) rotate(0deg) scale(1, 1);}
+            29.7% {transform: translate(-17px, -6px) rotate(-4deg) scale(1, 1)}
+            31.5% {transform: translate(-39px, -1px) rotate(-4deg) scale(1, 1);}
+            33.3% {transform: translate(-34px, 3px) rotate(-4deg) scale(1, 1);}
+            35.1% {transform: translate(-37px, 4px) rotate(-4deg) scale(1, 1);}
+            36.9% {transform: translate(-38px, 5px) rotate(-4deg) scale(1, 1);}
+            50.4% {transform: translate(-40px, 13px) rotate(-4deg) scale(1, 1);}
+            52.2% {transform: translate(-40px, 23px) rotate(-4deg) scale(1, 1);}
+            54% {transform: translate(-35px, -1px) rotate(-4deg) scale(1, 1);}
+            55.8% {transform: translate(-33px, -22px) rotate(-4deg) scale(0.95, 1.1);}
+            57.6% {transform: translate(-32px, -17px) rotate(-4deg) scale(1, 1.1);}
+            71.1% {transform: translate(-32px, -13px) rotate(-4deg) scale(1, 1.1);}
+            72.9% {transform: translate(-38px, 5px) rotate(-5deg) scale(1, 1);}
+            74.7% {transform: translate(-8px, -35px) rotate(5deg) scale(1, 1);}
+            75.6% {transform: translate(2px, -41px) rotate(5deg) scale(0.95, 1);}
+            77.4% {transform: translate(2px, -22px) rotate(5deg) scale(0.95, 1);}
+            88.2% {transform: translate(4px, -3px) rotate(9deg) scale(1, 1);}
+            81% {transform: translate(8px, -4px) rotate(7deg) scale(0.97, 1);}
+            81.9% {transform: translate(12px, -6px) rotate(8deg) scale(0.97, 1);}
+            84.6% {transform: translate(6px, 4px) rotate(8deg) scale(1, 1);}
+            87.3% {transform: translate(11px, -6px) rotate(8deg) scale(0.97, 1);}
+            90% {transform: translate(4px, 7px) rotate(3deg) scale(1, 1);}
+            92.7% {transform: translate(-2px, 2px) rotate(0deg) scale(1, 1);}
+            100% {transform: translate(-5px, 2px) rotate(0deg) scale(1, 1);}
         }
         .rabbit-right-eye::after,
         .rabbit-left-eye::after,
         .rabbit-right-eye::before,
         .rabbit-left-eye::before
         {
-            width: 8px;
-            height: 15px;
-            background-color: rgb(53, 50, 35);
+            width: 12px;
+            height: 14px;
+            background-color: #555458;
             z-index: 10;
             border-radius: 50%;
+            box-shadow: none;
         }
         .rabbit-right-eye::after,
         .rabbit-left-eye::after{
             transform: translate(87px , -17px);
-            box-shadow: inset 0px 36px 0px 12px rgba(0,0,0,0.1);
         }
         .rabbit-right-eye::before,
         .rabbit-left-eye::before{
             transform: translate(34px , 0px) rotate(0deg);
-            
-            animation: anim-eye 6s 2s linear infinite forwards;
+        }
+        .rabbit-right-eye::after,
+        .rabbit-right-eye::before
+        {
+            animation: anim-eye-r 6s linear infinite;
+        }
+        .rabbit-left-eye::after,
+        .rabbit-left-eye::before
+        {
+            animation: anim-eye-l 6s linear infinite;
+        }
+        @keyframes anim-eye-r{
+            2.7% {background-color: #555458; box-shadow: none;}
+            27.9% {background-color: #555458; box-shadow: none;}
+            27.91% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            29.8% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            29.81% {background-color: #555458; box-shadow: none;}
+            71% {background-color: #555458; box-shadow: none;}
+            71.01% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            100% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+        }
+        @keyframes anim-eye-l{
+            0% {background-color: #555458; box-shadow: none;}
+            12.6% {background-color: #555458; box-shadow: none;}
+            12.61% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            12.8% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            12.81% {background-color: #555458; box-shadow: none;}
+            27.9% {background-color: #555458; box-shadow: none;}
+            27.91% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            29.8% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            29.81% {background-color: #555458; box-shadow: none;}
+            35.1% {background-color: #555458; box-shadow: none;}
+            35.11% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            35.3% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            35.31% {background-color: #555458; box-shadow: none;}
+            50.4% {background-color: #555458; box-shadow: none;}
+            50.41% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            54.6% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            54.61% {background-color: #555458; box-shadow: none;}
+            71% {background-color: #555458; box-shadow: none;}
+            71.01% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            89.2% {background-color: transparent; box-shadow: inset 1px 10px 0 -5px #555458;}
+            89.21% {background-color: #555458; box-shadow: none;}
+            100% {background-color: #555458; box-shadow: none;}
+            }
+        .rabbit-right-eyebrow,
+        .rabbit-left-eyebrow{
+            top:3px;
+            z-index: 2;
+        }
+        .rabbit-right-eye,
+        .rabbit-left-eye{
+            top: 40px;
+            z-index: 2;
+        }
+        .rabbit-right-nose,
+        .rabbit-left-nose{
+            top: 43px;left: 54px;
+            z-index: 2;
+        }
+        .rabbit-right-mouth{
+            top: 76px;left: 51px;
+            animation: anim-mouth-r 6s linear infinite;
+        }
+        .rabbit-left-mouth{
+            top: 83px;left: 44px;
+            animation: anim-mouth-l 6s linear infinite;
+        }
+        @keyframes anim-mouth-l{
+            2.7% {transform: rotate(6deg) translate(0px, 0px);}
+            3.6% {transform: rotate(8deg) translate(0px, -1px);}
+            5.4% {transform: rotate(8deg) translate(0px, -2px);}
+            9% {transform: rotate(8deg) translate(0px, -5px);}
+            17.1% {transform: rotate(8deg) translate(0px, -4px);}
+            18.9% {transform: rotate(8deg) translate(-3px, 2px);}
+            20.7% {transform: rotate(11deg) translate(-6px, 5px);}
+            22.5% {transform: rotate(4deg) translate(-11px, 7px);}
+            24.3% {transform: rotate(-2deg) translate(-16px, 11px);}
+            26.1% {transform: rotate(-2deg) translate(-17px, 7px);}
+            27.9% {transform: rotate(-2deg) translate(-18px, 8px);}
+            29.7% {transform: rotate(-2deg) translate(-16px, 8px);}
+            38.7% {transform: rotate(-2deg) translate(-15px, 9px);}
+            40.5% {transform: rotate(-3deg) translate(-16px, 7px);}
+            42.3% {transform: rotate(0deg) translate(-7px, 6px);}
+            44.1% {transform: rotate(14deg) translate(1px, -3px);}
+            45.9% {transform: rotate(6deg) translate(0px, -3px);}
+            47.7% {transform: rotate(6deg) translate(-1px, -4px);}
+            49.5% {transform: rotate(7deg) translate(-1px, -4px);}
+            65.7% {transform: rotate(4deg) translate(-2px, -7px);}
+            67.5% {transform: rotate(4deg) translate(-6px, -6px);}
+            69.3% {transform: rotate(-14deg) translate(0px, -6px);}
+            71.1% {transform: rotate(7deg) translate(4px, -1px);}
+            73.8% {transform: rotate(1deg) translate(9px, 5px);}
+            76.5% {transform: rotate(7deg) translate(-5px, 5px);}
+            79.2% {transform: rotate(7deg) translate(-2px, -3px);}
+            81.9% {transform: rotate(10deg) translate(-4px, 2px);}
+            84.6% {transform: rotate(16deg) translate(-3px, -3px);}
+            84.4% {transform: rotate(21deg) translate(-3px, -11px);}
+            86.2% {transform: rotate(21deg) translate(1px, -8px);}
+            100% {transform: rotate(12deg) translate(6px, -5px);}
+        }
+        @keyframes anim-mouth-r{
+            0.9% {transform: rotate(0deg) translate(0, 0);}
+            1.8% {transform: rotate(-1deg) translate(-1px, 3px);}
+            3.6% {transform: rotate(-1deg) translate(-1px, 2px);}
+            5.4% {transform: rotate(-1deg) translate(0px, 2px);}
+            7.2% {transform: rotate(-1deg) translate(8px, -1px);}
+            9% {transform: rotate(-1deg) translate(8px, 0px);}
+            10.8% {transform: rotate(-7deg) translate(8px, 2px);}
+            12.6% {transform: rotate(1deg) translate(-1px, 3px);}
+            14.4% {transform: rotate(1deg) translate(-3px, 2px);}
+            16.2% {transform: rotate(0deg) translate(0px, 1px);}
+            18% {transform: rotate(0deg) translate(-2px, 2px);}
+            26.1% {transform: rotate(0deg) translate(-8px, 9px);}
+            27.9% {transform: rotate(1deg) translate(-9px, 17px);}
+            29.7% {transform: rotate(-9deg) translate(-12px, 10px);}
+            31.5% {transform: rotate(-5deg) translate(-19px, 8px);}
+            33.3% {transform: rotate(3deg) translate(-13px, 7px);}
+            35.1% {transform: rotate(3deg) translate(-11px, 7px);}
+            36.9% {transform: rotate(-1deg) translate(-10px, 8px);}
+            38.7% {transform: rotate(-1deg) translate(-10px, 7px);}
+            40.5% {transform: rotate(-4deg) translate(-9px, 6px);}
+            42.3% {transform: rotate(4deg) translate(-11px, 6px);}
+            44.1% {transform: rotate(4deg) translate(-12px, 6px);}
+            49.5% {transform: rotate(4deg) translate(-15px, 6px);}
+            50.4% {transform: rotate(2deg) translate(-15px, 11px);}
+            52.2% {transform: rotate(2deg) translate(-15px, 10px);}
+            54% {transform: rotate(5deg) translate(-15px, 4px);}
+            55.8% {transform: rotate(5deg) translate(-6px, 3px);}
+            57.6% {transform: rotate(5deg) translate(-6px, 2px);}
+            61.2% {transform: rotate(5deg) translate(-6px, 0px);}
+            63% {transform: rotate(5deg) translate(-7px, -4px);}
+            71.1% {transform: rotate(5deg) translate(-6px, -5px);}
+            72.9% {transform: rotate(5deg) translate(-18px, 7px);}
+            74.7% {transform: rotate(9deg) translate(0px, -20px);}
+            75.6% {transform: rotate(3deg) translate(3px, -19px);}
+            77.4% {transform: rotate(10deg) translate(1px, -24px);}
+            88.2% {transform: rotate(9deg) translate(1px, -25px);}
+            81% {transform: rotate(9deg) translate(-3px, -31px);}
+            81.9% {transform: rotate(9deg) translate(-6px, -31px);}
+            84.6% {transform: rotate(1deg) translate(0px, -23px);}
+            87.3% {transform: rotate(8deg) translate(-7px, -20px);}
+            90% {transform: rotate(8deg) translate(-4px, -22px);}
+            92.7% {transform: rotate(0deg) translate(0px, -15px);}
+            94.5% {transform: rotate(-1deg) translate(-6px, -12px);}
+            100% {transform: rotate(-1deg) translate(-7px, -9px);}
         }
         .rabbit-right-eyebrow::after,
         .rabbit-left-eyebrow::after,
@@ -206,54 +556,316 @@
         .rabbit-left-eyebrow::before{
             transform: translate(34px , 16px);
         }
-        .rabbit-right-nose,
-        .rabbit-left-nose{
+        .rabbit-right-nose::after,
+        .rabbit-left-nose::after{
             width: 14px;
             height: 14px;
             background-image: linear-gradient(-45deg, #ff908c 50%, transparent 50%);
             border-radius: 4px;
-            transform: translate(57px, -28px) rotate(45deg);
+            transform: rotate(45deg);
         }
-        .rabbit-right-mouth,
         .rabbit-left-mouth{
+            border-radius: 4px 4px 10px 12px;
+            transform: scaleY(0.8);
+        }
+        .rabbit-right-mouth{
+            border-radius: 4px 4px 10px 12px;
+            transform: scaleY(0.8);
+        }
+        .rabbit-right-mouth::after{
+            top: -20px;
+            left: -24px;
+            position: absolute;
+            width: 60px;
+            height: 50px;
+            border-radius: 0 100%;
+            background: #ece1b4;
+            transform: rotate(-27deg);
+            transform-origin: top left;
+            z-index: 0;
+        }
+        .rabbit-left-mouth::after{
+            top: -16px;
+            left: -24px;
+            position: absolute;
+            width: 60px;
+            height: 50px;
+            border-radius: 0 100%;
+            background: #ece1b4;
+            transform: rotate(-42deg);
+            transform-origin: top left;
+            z-index: 0;
+        }
+        .rabbit-right-mouth>div{
+            animation: anim-mouth-r2 6s linear infinite;
+            top: 4px;left: 0;
+            transform: translate(0px, 0) scale(1, 1) skew(0deg);
+            top: 0;
+            left: 0;
             width: 22px;
             height: 23px;
             background: #555458;
             border-radius: 4px 4px 12px 10px;
             overflow: hidden;
-            transform: translate(53px , -13px);
         }
-        .rabbit-left-mouth{
-            border-radius: 4px 4px 10px 12px;
-            transform: translate(53px, -13px) scaleY(0.8);
-        }
-        .rabbit-right-mouth::before,
-        .rabbit-left-mouth::before{
-            transform: translate(4px , 0px);
-            width: 11px;
-            height: 7px;
+        .rabbit-left-mouth>div{
+            animation: anim-mouth-l2 6s linear infinite;
+            top: 4px;left: 0;
+            transform: translate(0px, 0) scale(1, 1) skew(0deg);
+            top: 0;
+            left: 0;
+            width: 22px;
+            height: 23px;
             background: #555458;
-            border-radius: 0 0 3px 3px;
-            box-shadow: inset 55px 50px 0 -50px #fffff8, inset -55px 50px 0 -50px #fffff8;
-            z-index: 1;
+            border-radius: 4px 4px 12px 10px;
+            overflow: hidden;
         }
         .rabbit-right-mouth>div::before,
         .rabbit-left-mouth>div::before{
             width: 15px;
             height: 20px;
+            position: absolute;
+            top: 12px;left: 2px;
             border-radius: 50%;
             background: #e16858;
             transform: translate(5px , 5px);
         }
+        @keyframes anim-mouth-l2{
+            19.8% {transform: translate(10px, -10px) scaleY(0.8) scaleX(1);}
+            20.7% {transform: translate(10px, -10px) scaleY(0.8) scaleX(0.9);}
+            22.5% {transform: translate(10px, -10px) scaleY(0.8) scaleX(0.8);}
+            38.7% {transform: translate(10px, -10px) scaleY(0.8) scaleX(0.8);}
+            40.5% {transform: translate(10px, -8px) scaleY(0.8) scaleX(1);}
+            47.7% {transform: translate(11px, -8px) scaleY(0.8) scaleX(0.9);}
+            49.5% {transform: translate(11px, -7px) scaleY(0.8) scaleX(0.9);}
+            65.7% {transform: translate(11px, -12px) scaleY(0.8) scaleX(0.9);}
+            67.5% {transform: translate(10px, -10px) scaleY(0.8) scaleX(1.1);}
+            69.3% {transform: translate(10px, -2px) scaleY(1.2) scaleX(1.2);}
+            71.1% {transform: translate(12px, -11px) scaleY(1.2) scaleX(1.2);}
+            73.8% {transform: translate(12px, -7px) scaleY(1.2) scaleX(1.2);}
+            76.5% {transform: translate(12px, -10px) scaleY(1.2) scaleX(1.2);}
+            79.2% {transform: translate(12px, -10px) scaleY(1.2) scaleX(1.2);}
+            84.6% {transform: translate(11px, -9px) scaleY(1) scaleX(1.2);}
+            86.2% {transform: translate(11px, -9px) scaleY(1) scaleX(1.2);}
+            100% {transform: translate(11px, -10px) scaleY(1) scaleX(1.2);}
+        }
+        @keyframes anim-mouth-r2{
+            0.9% {transform: translate(0px, 0) scale(1, 1) skew(0deg);}
+            1.8% {transform: translate(0px, -8px) scale(1, 1) skew(0deg);}
+            3.6% {transform: translate(0px, -12px) scale(1, 1) skew(0deg);}
+            5.4% {transform: translate(-1px, -8px) scale(0.7, 1) skew(0deg);}
+            7.2% {transform: translate(1px, -12px) scale(0.9, 1) skew(0deg);}
+            9% {transform: translate(1px, -10px) scale(1, 1) skew(0deg);}
+            10.8% {transform: translate(1px, -4px) scale(1, 1) skew(0deg);}
+            12.6% {transform: translate(1px, -18px) scale(1.1, 0.9) skew(0deg);}
+            14.4% {transform: translate(0px, -12px) scale(0.8, 0.9) skew(0deg);}
+            16.2% {transform: translate(0px, -2px) scale(0.9, 0.8) skew(0deg);}
+            18% {transform: translate(0px, 0px) scale(0.9, 1) skew(0deg);}
+            21.6% {transform: translate(0px, -11px) scale(1, 1) skew(0deg);}
+            23.4% {transform: translate(0px, -17px) scale(1.2, 1) skew(0deg);}
+            27.9% {transform: translate(2px, -17px) scale(1.2, 1) skew(0deg);}
+            29.7% {transform: translate(2px, -11px) scale(1.2, 1) skew(0deg);}
+            31.5% {transform: translate(2px, -6px) scale(1, 1) skew(0deg);}
+            33.3% {transform: translate(1px, -4px) scale(1, 1) skew(0deg);}
+            35.1% {transform: translate(1px, -6px) scale(0.8, 1) skew(0deg);}
+            36.9% {transform: translate(-1px, -6px) scale(0.5, 0.6) skew(0deg);}
+            38.7% {transform: translate(1px, -6px) scale(0.7, 0.6) skew(0deg);}
+            40.5% {transform: translate(2px, -9px) scale(1.1, 1) skew(0deg);}
+            42.3% {transform: translate(-1px, -15px) scale(1.1, 1) skew(0deg);}
+            44.1% {transform: translate(-1px, -11px) scale(0.8, 1) skew(0deg);}
+            49.5% {transform: translate(0px, -17px) scale(1.1, 0.8) skew(0deg);}
+            53.1% {transform: translate(0px, -17px) scale(0.9, 0.8) skew(0deg);}
+            54.9% {transform: translate(0px, -7px) scale(0.6, 0.8) skew(0deg);}
+            55.8% {transform: translate(0px, -3px) scale(0.6, 0.8) skew(0deg);}
+            57.6% {transform: translate(-1px, -7px) scale(0.5, 0.5) skew(0deg);}
+            61.2% {transform: translate(-1px, -4px) scale(0.9, 0.4) skew(0deg);}
+            63% {transform: translate(2px, -2px) scale(2.3, 0.7) skew(0deg);}
+            64.8% {transform: translate(2px, -2px) scale(2.1, 0.8) skew(0deg);}
+            71.1% {transform: translate(1px, -3px) scale(2, 0.6) skew(0deg);}
+            72.9% {transform: translate(1px, -16px) scale(1.3, 0.8) skew(0deg);}
+            74.7% {transform: translate(-3px, 10px) scale(1.3, 1.2) skew(-14deg);}
+            75.6% {transform: translate(-3px, 12px) scale(1.3, 1.2) skew(-14deg);}
+            88.2% {transform: translate(-3px, 10px) scale(1.3, 1.1) skew(-14deg);}
+            81% {transform: translate(-3px, 13px) scale(1.5, 1.2) skew(-14deg);}
+            81.9% {transform: translate(-4px, 17px) scale(1.5, 1.2) skew(-20deg);}
+            84.6% {transform: translate(-4px, 9px) scale(1.3, 1) skew(-15deg);}
+            87.3% {transform: translate(-3px, 15px) scale(1.3, 1) skew(-13deg);}
+            90% {transform: translate(-3px, 12px) scale(1.3, 1.1) skew(-13deg);}
+            92.7% {transform: translate(-2px, 4px) scale(1.3, 1) skew(-9deg);}
+            94.5% {transform: translate(3px, -5px) scale(1.4, 1) skew(0deg);}
+            100% {transform: translate(3px, -11px) scale(1.4, 1) skew(0deg);}
+        }
         .rabbit-right-ear-left,
         .rabbit-left-ear-left{
             width: 20px;
+            position: absolute;
             height: 80px;
             background: #eda294;
             border-radius: 5px 19px 100% 10px;
             box-shadow: inset -9px 2px #ece0b1;
             transform-origin: bottom center;
-            transform: translate(220px , 62px) rotate(-40deg);
+            transform: rotate(-40deg);
+        }
+        .rabbit-right-face>*{
+            position: absolute;
+        }
+        .rabbit-left-face>*{
+            position: absolute;
+        }
+        .rabbit-left-ear-left{
+            top: -69px;left: 77px;
+            animation: anim-ear-l-l 6s linear infinite;
+        }
+        @keyframes anim-ear-l-l{
+            4.5% {transform: rotate(13deg) translate(0px, 0px);}
+            5.4% {transform: rotate(12deg) translate(0px, 0px);}
+            9% {transform: rotate(14deg) translate(0px, 0px);}
+            17.1% {transform: rotate(12deg) translate(0px, 0px);}
+            18.9% {transform: rotate(11deg) translate(0px, 0px);}
+            22.5% {transform: rotate(9deg) translate(-5px, 0px);}
+            24.3% {transform: rotate(7deg) translate(-7px, 0px);}
+            26.1% {transform: rotate(7deg) translate(-9px, 0px);}
+            27.9% {transform: rotate(9deg) translate(-9px, 0px);}
+            29.7% {transform: rotate(6deg) translate(-5px, 0px);}
+            31.5% {transform: rotate(5deg) translate(-7px, -1px);}
+            36.9% {transform: rotate(7deg) translate(-7px, -1px);}
+            38.7% {transform: rotate(7deg) translate(-5px, 1px);}
+            40.5% {transform: rotate(5deg) translate(-6px, -3px);}
+            42.3% {transform: rotate(14deg) translate(-4px, -1px);}
+            44.1% {transform: rotate(15deg) translate(0px, -1px);}
+            45.9% {transform: rotate(15deg) translate(1px, -1px);}
+            47.7% {transform: rotate(14deg) translate(0px, -3px);}
+            65.7% {transform: rotate(14deg) translate(1px, 0px);}
+            67.5% {transform: rotate(5deg) translate(-5px, 0px);}
+            69.3% {transform: rotate(25deg) translate(-19px, 11px);}
+            71.1% {transform: rotate(55deg) translate(-4px, 11px);}
+            76.5% {transform: rotate(25deg) translate(-10px, 5px);}
+            79.2% {transform: rotate(50deg) translate(-7px, 13px);}
+            81.9% {transform: rotate(25deg) translate(-5px, 3px);}
+            84.6% {transform: rotate(50deg) translate(-3px, 8px);}
+            84.4% {transform: rotate(34deg) translate(-3px, 4px);}
+            86.2% {transform: rotate(11deg) translate(-7px, 0px);}
+            90% {transform: rotate(2deg) translate(-9px, 0px);}
+            100% {transform: rotate(1deg) translate(-9px, 0px);}
+        }
+        .rabbit-left-ear-right{
+            top: -76px;left: 35px;
+            animation: anim-ear-l-r 6s linear infinite;
+        }
+        @keyframes anim-ear-l-r{
+            2.7% {transform: rotate(-36deg) translate(0px, 0px);}
+            3.6% {transform: rotate(-34deg) translate(0px, 0px);}
+            17.1% {transform: rotate(-32deg) translate(0px, 0px);}
+            22.5% {transform: rotate(-25deg) translate(0px, 0px);}
+            24.3% {transform: rotate(-14deg) translate(4px, 6px);}
+            26.1% {transform: rotate(-14deg) translate(3px, 6px);}
+            27.9% {transform: rotate(-15deg) translate(2px, 7px);}
+            29.7% {transform: rotate(-15deg) translate(5px, 7px);}
+            31.5% {transform: rotate(-12deg) translate(5px, 7px);}
+            36.9% {transform: rotate(-15deg) translate(5px, 8px);}
+            38.7% {transform: rotate(-16deg) translate(6px, 10px);}
+            40.5% {transform: rotate(-17deg) translate(2px, 4px);}
+            42.3% {transform: rotate(-27deg) translate(2px, 4px);}
+            44.1% {transform: rotate(-29deg) translate(6px, 2px);}
+            45.9% {transform: rotate(-29deg) translate(8px, 2px);}
+            47.7% {transform: rotate(-29deg) translate(6px, 1px);}
+            65.7% {transform: rotate(-29deg) translate(6px, 0px);}
+            67.5% {transform: rotate(-26deg) translate(-4px, -5px);}
+            69.3% {transform: rotate(-44deg) translate(-14px, 9px);}
+            71.1% {transform: rotate(-44deg) translate(-10px, 9px);}
+            73.8% {transform: rotate(-48deg) translate(-9px, 9px);}
+            76.5% {transform: rotate(-40deg) translate(-5px, 7px);}
+            79.2% {transform: rotate(-44deg) translate(-11px, 10px);}
+            81.9% {transform: rotate(-36deg) translate(2px, 10px);}
+            84.6% {transform: rotate(-43deg) translate(-10px, 10px);}
+            84.4% {transform: rotate(-31deg) translate(-0px, 9px);}
+            86.2% {transform: rotate(-17deg) translate(-9px, 4px);}
+            100% {transform: rotate(-5deg) translate(-9px, 0px);}
+        }
+        .rabbit-right-ear-left{
+            animation: anim-ear-r-l 6s linear infinite;
+            top: -83px;
+            left: 50px;
+        }
+        .rabbit-right-ear-right{
+            animation: anim-ear-r-r 6s linear infinite;
+            top: -64px;
+            left: 99px;
+        }
+        @keyframes anim-ear-r-r{
+            4.5% {transform: rotate(8deg) translate(0, 0);}
+            5.4% {transform: rotate(5deg) translate(3px, 0px);}
+            7.2% {transform: rotate(5deg) translate(4px, 0px);}
+            14.4% {transform: rotate(7deg) translate(1px, 3px);}
+            18% {transform: rotate(9deg) translate(-1px, 3px);}
+            26.1% {transform: rotate(14deg) translate(-3px, 3px);}
+            27.9% {transform: rotate(17deg) translate(0px, -1px);}
+            29.7% {transform: rotate(22deg) translate(14px, 11px);}
+            31.5% {transform: rotate(22deg) translate(4px, 0px);}
+            33.3% {transform: rotate(28deg) translate(0px, 0px);}
+            35.1% {transform: rotate(13deg) translate(4px, -3px);}
+            36.9% {transform: rotate(-1deg) translate(7px, -3px);}
+            38.7% {transform: rotate(-4deg) translate(7px, -3px);}
+            40.5% {transform: rotate(-8deg) translate(7px, -3px);}
+            42.3% {transform: rotate(-5deg) translate(7px, -3px);}
+            45.9% {transform: rotate(-2deg) translate(7px, -1px);}
+            50.4% {transform: rotate(2deg) translate(4px, -1px);}
+            52.2% {transform: rotate(2deg) translate(4px, 1px);}
+            54% {transform: rotate(5deg) translate(-2px, -1px);}
+            55.8% {transform: rotate(4deg) translate(3px, 2px);}
+            57.6% {transform: rotate(7deg) translate(-2px, -1px);}
+            59.4% {transform: rotate(9deg) translate(-3px, -1px);}
+            63% {transform: rotate(11deg) translate(-3px, -1px);}
+            71.1% {transform: rotate(13deg) translate(-5px, -4px);}
+            72.9% {transform: rotate(20deg) translate(-7px, 10px);}
+            74.7% {transform: rotate(-60deg) translate(8px, 1px);}
+            75.6% {transform: rotate(-29deg) translate(19px, 20px);}
+            77.4% {transform: rotate(-11deg) translate(8px, 10px);}
+            88.2% {transform: rotate(0deg) translate(-11px, -1px);}
+            81% {transform: rotate(-8deg) translate(5px, -1px);}
+            82.8% {transform: rotate(-12deg) translate(7px, -1px);}
+            84.6% {transform: rotate(-7deg) translate(5px, -1px);}
+            87.3% {transform: rotate(-12deg) translate(8px, -1px);}
+            90% {transform: rotate(-4deg) translate(11px, 5px);}
+            92.7% {transform: rotate(10deg) translate(11px, 5px);}
+            100% {transform: rotate(5deg) translate(16px, 7px);}
+        }
+        @keyframes anim-ear-r-l{
+            2.7% {transform: rotate(-40deg) translate(0, 0);}
+            3.6% {transform: rotate(-38deg) translate(-3px, 2px);}
+            7.2% {transform: rotate(-38deg) translate(-3px, 4px);}
+            26.1% {transform: rotate(-31deg) translate(-3px, 4px);}
+            27.9% {transform: rotate(-19deg) translate(-3px, 7px);}
+            29.7% {transform: rotate(-9deg) translate(18px, 14px);}
+            31.5% {transform: rotate(11deg) translate(-2px, 7px);}
+            33.3% {transform: rotate(23deg) translate(-10px, 8px);}
+            35.1% {transform: rotate(3deg) translate(-6px, 6px);}
+            36.9% {transform: rotate(-19deg) translate(-2px, 6px);}
+            38.7% {transform: rotate(-24deg) translate(-2px, 6px);}
+            40.5% {transform: rotate(-26deg) translate(-2px, 6px);}
+            42.3% {transform: rotate(-21deg) translate(-2px, 6px);}
+            45.9% {transform: rotate(-18deg) translate(-2px, 5px);}
+            50.4% {transform: rotate(-5deg) translate(-11px, 10px);}
+            52.2% {transform: rotate(6deg) translate(-19px, 12px);}
+            54% {transform: rotate(-4deg) translate(-22px, 10px);}
+            55.8% {transform: rotate(-21deg) translate(-15px, 10px);}
+            57.6% {transform: rotate(-17deg) translate(-16px, 10px);}
+            59.4% {transform: rotate(-14deg) translate(-16px, 10px);}
+            64.8% {transform: rotate(-12deg) translate(-16px, 10px);}
+            71.1% {transform: rotate(-12deg) translate(-15px, 7px);}
+            72.9% {transform: rotate(17deg) translate(-21px, 30px);}
+            74.7% {transform: rotate(-57deg) translate(-9px, 10px);}
+            75.6% {transform: rotate(-39deg) translate(1px, 4px);}
+            77.4% {transform: rotate(-13deg) translate(-4px, 10px);}
+            88.2% {transform: rotate(-22deg) translate(-17px, 17px);}
+            81% {transform: rotate(-26deg) translate(-13px, 9px);}
+            81.9% {transform: rotate(-29deg) translate(-14px, 9px);}
+            84.6% {transform: rotate(-23deg) translate(-11px, 4px);}
+            87.3% {transform: rotate(-31deg) translate(-11px, 4px);}
+            90% {transform: rotate(-19deg) translate(-4px, 3px);}
+            92.7% {transform: rotate(2deg) translate(-9px, 7px);}
+            94.5% {transform: rotate(-1deg) translate(-9px, 7px);}
+            100% {transform: rotate(-15deg) translate(0px, 1px);}
         }
         .rabbit-right-ear-left::before,
         .rabbit-left-ear-left::before,
@@ -267,6 +879,9 @@
             transform-origin: center right;
             transform: translate(-73px , -8px) rotate(-20deg);
         }
+        .rabbit-left-ear-left::before{
+            transform: translate(-73px , -8px) rotate(10deg);
+        }
         .rabbit-right-ear-right,
         .rabbit-left-ear-right{
             width: 22px;
@@ -275,12 +890,10 @@
             border-radius: 10px 50% 90% 0;
             box-shadow: inset -10px 7px #ece1b4;
             transform-origin: bottom center;
-            transform: translate(274px, 8px) rotate(27deg);
-            animation: anim-ear linear infinite forwards 6s;
+            /* transform: translate(274px, 8px) rotate(27deg); */
+            transform: rotate(27deg);
         }
         /********************** Rabbit Face End ********************/
-
-        
         /********************** City Start ********************/
         .city{
             width: 1250px;
@@ -307,7 +920,6 @@
             background-color: rgb(209, 195, 3);
             position: absolute;
         }
-
         .city>div:nth-of-type(1)>div:nth-of-type(1){
             top: 15px;left: 10px;
         }
@@ -319,31 +931,22 @@
         }
         .city>div:nth-of-type(1)>div:nth-of-type(2){
             top: 15px;left: 30px;
+            animation: anim-lamp1 6s linear infinite;
         }
-        .city>div:nth-of-type(1)>div:nth-of-type(2)::after{
-            top: 0px;left: 80px;
+        @keyframes anim-lamp1{
+            0%{background-color: rgb(209, 195, 3);}
+            40%{background-color: rgb(209, 195, 3);}
+            41%{background-color: rgb(52, 52, 52);}
+            100%{background-color: rgb(52, 52, 52);}
         }
-        .city>div:nth-of-type(1)>div:nth-of-type(2)::before{
-            top: 0px;left: 60px;
-        }
-        .city>div:nth-of-type(1)>div:nth-of-type(3){
-            top: 95px;left: 10px;
-        }
-        .city>div:nth-of-type(1)>div:nth-of-type(3)::after{
-            top: 0px;left: 40px;
-        }
-        .city>div:nth-of-type(1)>div:nth-of-type(3)::before{
-            top: 0px;left: 60px;
-        }
-        .city>div:nth-of-type(1)>div:nth-of-type(4){
-            top: 95px;left: 30px;
-        }
-        .city>div:nth-of-type(1)>div:nth-of-type(4)::after{
-            top: 0px;left: 80px;
-        }
-        .city>div:nth-of-type(1)>div:nth-of-type(4)::before{
-            top: 0px;left: 60px;
-        }
+        .city>div:nth-of-type(1)>div:nth-of-type(2)::after{top: 0px;left: 80px;}
+        .city>div:nth-of-type(1)>div:nth-of-type(2)::before{top: 0px;left: 60px;}
+        .city>div:nth-of-type(1)>div:nth-of-type(3){top: 95px;left: 10px;}
+        .city>div:nth-of-type(1)>div:nth-of-type(3)::after{top: 0px;left: 40px;}
+        .city>div:nth-of-type(1)>div:nth-of-type(3)::before{top: 0px;left: 60px;}
+        .city>div:nth-of-type(1)>div:nth-of-type(4){top: 95px;left: 30px;}
+        .city>div:nth-of-type(1)>div:nth-of-type(4)::after{top: 0px;left: 80px;}
+        .city>div:nth-of-type(1)>div:nth-of-type(4)::before{top: 0px;left: 60px;}
         .city>div:nth-of-type(2){
             width: 155px;height: 100%;
             background: rgb(57, 57, 57);
@@ -362,78 +965,47 @@
             width: 25px;
             height: 10px;
         }
-        .city>div:nth-of-type(2)>div:nth-of-type(1){
-            top: 10px;left: 10px;
+        .city>div:nth-of-type(2)>div:nth-of-type(1){top: 10px;left: 10px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(1)::after{top: 0; left: 70px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(1)::before{top: 0; left: 110px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(2)::after{top: 0; left: -45px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(2){top: 30px;left: 95px;
+            animation: anim-lamp4 6s linear infinite;
         }
-        .city>div:nth-of-type(2)>div:nth-of-type(1)::after{
-            top: 0; left: 70px;
+        @keyframes anim-lamp4{
+            0%{background-color: rgb(209, 195, 3);}
+            40%{background-color: rgb(209, 195, 3);}
+            41%{background-color: rgb(57, 57, 57);}
+            100%{background-color: rgb(57, 57, 57);}
         }
-        .city>div:nth-of-type(2)>div:nth-of-type(1)::before{
-            top: 0; left: 110px;
+        .city>div:nth-of-type(2)>div:nth-of-type(2)::before{top: 0; left: -85px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(3){top: 52px;left: 10px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(3)::after{top: 0; left: 70px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(3)::before{top: 0; left: 110px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(4)::after{top: 0; left: -45px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(4){top: 72px;left: 95px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(4)::before{top: 0; left: -85px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(5){top: 92px;left: 10px;
+            animation: anim-lamp3 6s linear infinite;}
+        @keyframes anim-lamp3{
+            0%{background-color: rgb(209, 195, 3);}
+            22%{background-color: rgb(209, 195, 3);}
+            23%{background-color: rgb(57, 57, 57);}
+            65%{background-color: rgb(57, 57, 57);}
+            66%{background-color: rgb(209, 195, 3);}
+            100%{background-color: rgb(209, 195, 3);}
         }
-        .city>div:nth-of-type(2)>div:nth-of-type(2)::after{
-            top: 0; left: -45px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(2){
-            top: 30px;left: 95px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(2)::before{
-            top: 0; left: -85px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(3){
-            top: 52px;left: 10px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(3)::after{
-            top: 0; left: 70px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(3)::before{
-            top: 0; left: 110px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(4)::after{
-            top: 0; left: -45px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(4){
-            top: 72px;left: 95px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(4)::before{
-            top: 0; left: -85px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(5){
-            top: 92px;left: 10px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(5)::after{
-            top: 0; left: 70px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(5)::before{
-            top: 0; left: 110px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(6)::after{
-            top: 0; left: -45px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(6){
-            top: 112px;left: 95px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(6)::before{
-            top: 0; left: -85px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(7){
-            top: 132px;left: 10px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(7)::after{
-            top: 0; left: 70px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(7)::before{
-            top: 0; left: 110px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(8)::after{
-            top: 0; left: -45px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(8){
-            top: 152px;left: 95px;
-        }
-        .city>div:nth-of-type(2)>div:nth-of-type(8)::before{
-            top: 0; left: -85px;
-        }
+        .city>div:nth-of-type(2)>div:nth-of-type(5)::after{top: 0; left: 70px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(5)::before{top: 0; left: 110px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(6)::after{top: 0; left: -45px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(6){top: 112px;left: 95px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(6)::before{top: 0; left: -85px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(7){top: 132px;left: 10px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(7)::after{top: 0; left: 70px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(7)::before{top: 0; left: 110px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(8)::after{top: 0; left: -45px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(8){top: 152px;left: 95px;}
+        .city>div:nth-of-type(2)>div:nth-of-type(8)::before{top: 0; left: -85px;}
         .city>div:nth-of-type(3){
             width: 70px;height: 70px;
             background-color: transparent;
@@ -445,13 +1017,10 @@
             left: 50%;
         }
         .city>div:nth-of-type(3)>div{
-            position: absolute;
-            color: #eaeaea;
-        }
-        .city>div:nth-of-type(3)>div{
             position:absolute;
             margin:10px auto;
             width:10px;
+            color: #eaeaea;
         }
         .city>div:nth-of-type(3)>div::before,
         .city>div:nth-of-type(3)>div::after{
@@ -468,42 +1037,121 @@
         .city>div:nth-of-type(3)>div:nth-of-type(1){
             top: 65px;
             left: 40%;
+            transform: scale(1);
+            animation: anim-star1 6s linear infinite forwards;
+        }
+        @keyframes anim-star1{
+            0%{filter:opacity(1);transform: scale(1) rotate(0);}
+            50%{filter:opacity(0.6);transform: scale(0.8) rotate(45deg);}
+            100%{filter:opacity(.4);transform: scale(0.4) rotate(90deg);}
         }
         .city>div:nth-of-type(3)>div:nth-of-type(2){
             top: 102px;
             left: 15%;
             transform: scale(.4);
+            animation: anim-star2 6s linear infinite forwards;
+        }
+        @keyframes anim-star2{
+            0%{filter:opacity(1);}
+            25%{filter:opacity(.8);}
+            50%{filter:opacity(.6);}
+            100%{filter:opacity(.6);}
         }
         .city>div:nth-of-type(3)>div:nth-of-type(3){
             top: 42px;
             left: -56%;
             transform: scale(.5);
+            animation: anim-star3 6s ease-in  infinite forwards;
+        }
+        @keyframes anim-star3{
+            0%{filter:opacity(1);transform: scale(.5) rotate(0);}
+            50%{filter:opacity(.8);transform: scale(.6) rotate(45deg);}
+            100%{filter:opacity(.4);transform: scale(.7) rotate(90deg);}
         }
         .city>div:nth-of-type(3)>div:nth-of-type(4){
             top: 30px;
             left: 127%;
             transform: scale(.8);
+            animation: anim-star4 6s linear infinite forwards;
+        }
+        @keyframes anim-star4{
+            0%{filter:opacity(1);transform: scale(.8) rotate(90deg);}
+            50%{filter:opacity(1);transform: scale(.8) rotate(45deg);}
+            100%{filter:opacity(1);transform: scale(.8) rotate(0);}
         }
         .city>div:nth-of-type(3)>div:nth-of-type(5){
             top: -60px;
             left: -56%;
             transform: scale(1.2);
+            transform-origin: center;
+            animation: anim-star5 6s ease-in  infinite forwards;
+        }
+        @keyframes anim-star5{
+            0%{filter:opacity(1);transform: scale(1.2);}
+            50%{filter:opacity(0.8);transform: scale(.8);}
+            100%{filter:opacity(.6);transform: scale(.8);}
         }
         .city>div:nth-of-type(3)>div:nth-of-type(6){
             top: -5px;
             left: -97%;
             transform: scale(.3);
+            animation: anim-star9 6s ease-in  infinite forwards;
+        }
+        @keyframes anim-star9{
+            0%{filter:opacity(0);}
+            1%{filter:opacity(1);}
+            30%{filter:opacity(1);}
+            31%{filter:opacity(0);}
+            55%{filter:opacity(0);}
+            56%{filter:opacity(1);}
+            86%{filter:opacity(1);}
+            87%{filter:opacity(0);}
+            100%{filter:opacity(0);}
         }
         .city>div:nth-of-type(3)>div:nth-of-type(7){
             top: 90px;
             left: 148%;
             transform: scale(.9);
+            animation: anim-star7 6s linear infinite forwards ;
+        }
+        @keyframes anim-star7{
+            0%{filter:opacity(.2);}
+            25%{filter:opacity(.4);}
+            50%{filter:opacity(.6);}
+            75%{filter:opacity(.8);}
+            100%{filter:opacity(1);}
         }
         .city>div:nth-of-type(3)>div:nth-of-type(8){
             top: 94px;
             left: -47%;
             transform: scale(.5);
+            animation: anim-star8 6s linear infinite forwards ;
         }
+        @keyframes anim-star8{
+            0%{filter:opacity(.6);}
+            25%{filter:opacity(.8);}
+            50%{filter:opacity(.6);}
+            75%{filter:opacity(.8);}
+            100%{filter:opacity(1);}
+        }
+        .city>div:nth-of-type(3)>div:nth-of-type(9){
+            top: 70px;
+            left: 160%;
+            transform: scale(.3);
+            animation: anim-star10 6s ease-in  infinite forwards;
+        }
+        @keyframes anim-star10{
+            0%{filter:opacity(1);}
+            1%{filter:opacity(0);}
+            30%{filter:opacity(0);}
+            31%{filter:opacity(1);}
+            55%{filter:opacity(1);}
+            56%{filter:opacity(0);}
+            86%{filter:opacity(0);}
+            87%{filter:opacity(1);}
+            100%{filter:opacity(1);}
+        }
+
         .city>div:nth-of-type(4){
             width: 155px;
             background-color: rgb(52, 52, 52);
@@ -526,6 +1174,15 @@
         }
         .city>div:nth-of-type(4)>div:nth-of-type(1):before{
             top: 0px;left: 50px;
+            animation: anim-lamp5 6s linear infinite ;
+        }
+        @keyframes anim-lamp5{
+            0%{background-color: rgb(209, 195, 3);}
+            48%{background-color: rgb(209, 195, 3);}
+            49%{background-color: rgb(52, 52, 52);}
+            85%{background-color: rgb(52, 52, 52);}
+            86%{background-color: rgb(209, 195, 3);}
+            100%{background-color: rgb(209, 195, 3);}
         }
         .city>div:nth-of-type(4)>div:nth-of-type(2){
             top: 40px;left: 15px;
@@ -620,6 +1277,19 @@
         .city>div:nth-of-type(5)>div:nth-of-type(3){
             top: 90px;
             left: 20px;
+            animation: anim-lamp6 6s linear infinite forwards ;
+        }
+        @keyframes anim-lamp6{
+            0%{background-color: rgb(52, 52, 52);}
+            65%{background-color: rgb(52, 52, 52);}
+            66%{background-color: rgb(209, 195, 3);}
+            100%{background-color: rgb(209, 195, 3);}
+        }
+        @keyframes anim-lamp4{
+            0%{background-color: rgb(57, 57, 57);}
+            65%{background-color: rgb(57, 57, 57);}
+            66%{background-color: rgb(209, 195, 3);}
+            100%{background-color: rgb(209, 195, 3);}
         }
         .city>div:nth-of-type(5)>div:nth-of-type(3)::after{
             top: 0px;
@@ -783,54 +1453,18 @@
             position: absolute;
             border-radius: 70% 70% 81% 81%;
         }
-        .leaf1{
-            transform: rotate(-20deg);
-            top: 62%; left: 52%;
-        }
-        .leaf2{
-            transform: rotate(20deg);
-            top: 58%; left: 55%;
-        }
-        .leaf3{
-            transform: rotate(-23deg);
-            top: 33%; left: 52%;
-        }
-        .leaf4{
-            transform: rotate(10deg);
-            top: 29%; left: 54%;
-        }
-        .leaf5{
-            transform: rotate(0deg);
-            top: 2%; left: 53%;
-        }
-        .leaf6{
-            transform: rotate(-20deg);
-            top: 2%; left: 70%;
-        }
-        .leaf7{
-            transform: rotate(30deg);
-            top: 20%; left: 72%;
-        }
-        .leaf8{
-            transform: rotate(-30deg);
-            top: 20%; left: 2%;
-        }
-        .leaf9{
-            transform: rotate(20deg);
-            top: 20%; left: 5%;
-        }
-        .leaf10{
-            transform: rotate(10deg);
-            top: 58%; left: 3%;
-        }
-        .leaf11{
-            transform: rotate(-10deg);
-            top: 58%; left: 21%;
-        }
-        .leaf12{
-            transform: rotate(10deg);
-            top: 20%; left: 21%;
-        }
+        .leaf1{transform: rotate(-20deg);top: 62%; left: 52%;}
+        .leaf2{transform: rotate(20deg);top: 58%; left: 55%;}
+        .leaf3{transform: rotate(-23deg);top: 33%; left: 52%;}
+        .leaf4{transform: rotate(10deg);top: 29%; left: 54%;}
+        .leaf5{transform: rotate(0deg);top: 2%; left: 53%;}
+        .leaf6{transform: rotate(-20deg);top: 2%; left: 70%;}
+        .leaf7{transform: rotate(30deg);top: 20%; left: 72%;}
+        .leaf8{transform: rotate(-30deg);top: 20%; left: 2%;}
+        .leaf9{transform: rotate(20deg);top: 20%; left: 5%;}
+        .leaf10{transform: rotate(10deg);top: 58%; left: 3%;}
+        .leaf11{transform: rotate(-10deg);top: 58%; left: 21%;}
+        .leaf12{transform: rotate(10deg);top: 20%; left: 21%;}
         .gold{
             width: 8px;
             height: 8px;
@@ -839,61 +1473,24 @@
             z-index: 3;
             background-color: rgb(209, 195, 3);
         }
-        .gold1{
-            top: 53%; left: 21%;
-        }
-        .gold2{
-            top: 50%; left: 2%;
-        }
-        .gold3{
-            top: 30%; left: 4%;
-        }
-        .gold4{
-            top: 13%; left: 7%;
-        }
-        .gold5{
-            top: 13%; left: 21%;
-        }
-        .gold6{
-            top: 13%; left: 52%;
-        }
-        .gold7{
-            top: 18%; left: 55%;
-        }
-        .gold8{
-            top: 68%; left: 54%;
-        }
-        .gold9{
-            top: 40%; left: 53%;
-        }
-        .gold10{
-            top: 11%; left: 30%;
-        }
-        .gold11{
-            top: 22%; left: 32%;
-        }
-        .gold12{
-            top: 50%; left: 73%;
-        }
-        .gold12{
-            top: 0%; left: 54.5%;
-        }
-        .gold13{
-            top: 24%;
-            left: 29%;
-        }
-        .gold14{
-            top: 6%; left: 99%;
-        }
-        .gold15{
-            top: 56%; left: 4%;
-        }
-        .gold16{
-            top: 6%; left: 72%;
-        }
-        .gold17{
-            top: 41%; left: 71%;
-        }
+        .gold1{top: 53%; left: 21%;}
+        .gold2{top: 50%; left: 2%;}
+        .gold3{top: 30%; left: 4%;}
+        .gold4{top: 13%; left: 7%;}
+        .gold5{top: 13%; left: 21%;}
+        .gold6{top: 13%; left: 52%;}
+        .gold7{top: 18%; left: 55%;}
+        .gold8{top: 68%; left: 54%;}
+        .gold9{top: 40%; left: 53%;}
+        .gold10{top: 11%; left: 30%;}
+        .gold11{top: 22%; left: 32%;}
+        .gold12{top: 50%; left: 73%;}
+        .gold12{top: 0%; left: 54.5%;}
+        .gold13{top: 24%;left: 29%;}
+        .gold14{top: 6%; left: 99%;}
+        .gold15{top: 56%; left: 4%;}
+        .gold16{top: 6%; left: 72%;}
+        .gold17{top: 41%; left: 71%;}
         .window{
             left: 154px;
             border-top: 29px solid #375552;
@@ -917,7 +1514,6 @@
             box-shadow: -92px 0 #ffbc1f;
         }
         /********************** Garden End ********************/
-
         /********************** Room Start ********************/
         .room{
             width:  1250px;
@@ -1126,6 +1722,14 @@
             left: 47%;
             transform: scale(.8);
         }
+        @keyframes anim-light{
+            50%{
+            transform: scale(1.2);
+            }
+            100%{
+            transform: scale(.6);
+            }
+        }
         .light::after{
             width: 100%;
             height: 100%;
@@ -1136,6 +1740,7 @@
             border-radius: 50%;
             opacity: 0.4;
             box-shadow: 5px 5px 29px 33px yellow;
+            animation: anim-light 6s linear infinite forwards;
         }
         .light-top
         {
@@ -1209,7 +1814,7 @@
             left: -15px;
         }
         .glass-right{
-            top: -61px;
+            top: 238px;
             right: 434px;
             width: 3px;
             height: 38px;
@@ -1224,6 +1829,39 @@
             background-image: linear-gradient(-45deg, transparent 4%, #e16858 4%, #e16858 31%, #fffff8 31%, #fffff8 50%, transparent 50%);
             transform: rotate(45deg);
             position: absolute;
+        }
+        @keyframes anim-glass-l{
+            4.5% {transform: rotate(24deg) translate(0, 0) scale(.8);}
+            5.4% {transform: rotate(24deg) translate(3px, 0px) scale(.8);}
+            7.2% {transform: rotate(24deg) translate(4px, -1px) scale(.8);}
+            9% {transform: rotate(22deg) translate(5px, -1px) scale(.8);}
+            17.1% {transform: rotate(22deg) translate(5px, 1px) scale(.8);}
+            18.9% {transform: rotate(23deg) translate(7px, -2px) scale(.8);}
+            20.7% {transform: rotate(24deg) translate(8px, -5px) scale(.8);}
+            22.5% {transform: rotate(17deg) translate(12px, -5px) scale(.8);}
+            24.3% {transform: rotate(11deg) translate(17px, -5px) scale(.8);}
+            26.1% {transform: rotate(6deg) translate(19px, -6px) scale(.8);}
+            27.9% {transform: rotate(2deg) translate(21px, -8px) scale(.8);}
+            29.7% {transform: rotate(0deg) translate(22px, -9px) scale(.8);}
+            31.5% {transform: rotate(0deg) translate(23px, -12px) scale(.8);}
+            33.3% {transform: rotate(-1deg) translate(22px, -12px) scale(.8);}
+            35.1% {transform: rotate(-1deg) translate(22px, -11px) scale(.8);}
+            36.9% {transform: rotate(1deg) translate(23px, -8px) scale(.8);}
+            39.6% {transform: rotate(4deg) translate(22px, -8px) scale(.8);}
+            40.5% {transform: rotate(14deg) translate(17px, -6px) scale(.8);}
+            42.3% {transform: rotate(21deg) translate(10px, -2px) scale(.8);}
+            44.1% {transform: rotate(23deg) translate(7px, -2px) scale(.8);}
+            45.9% {transform: rotate(23deg) translate(5px, -2px) scale(.8);}
+            47.7% {transform: rotate(23deg) translate(6px, -2px) scale(.8);}
+            65.7% {transform: rotate(22deg) translate(5px, -1px) scale(.8);}
+            69.3% {transform: rotate(35deg) translate(5px, -1px) scale(.8);}
+            71.1% {transform: rotate(49deg) translate(5px, -1px) scale(.8);}
+            73.8% {transform: rotate(45deg) translate(10px, 10px) scale(.8);}
+            75.6% {transform: rotate(45deg) translate(15px, 20px) scale(.8);}
+            79.2% {transform: rotate(55deg) translate(15px, 20px) scale(.8);}
+            84.6% {transform: rotate(57deg) translate(20px, 30px) scale(.8);}
+            86.2% {transform: rotate(60deg) translate(35px, 60px) scale(.8);}
+            100% {transform: rotate(60deg) translate(35px, 70px) scale(.8);}
         }
         .glass-right::after{
             top: -44px;
@@ -1248,8 +1886,157 @@
             position: absolute;
         }
         .glass-left{
-            left: 282px;
-            top: -14px;
-            z-index: 1000;
+            top: 292px;
+            left: 272px;
+            width: 3px;
+            height: 48px;
+            background: #fffff8;
+            transform: rotate(4deg) scale(.8);
+            transform-origin: bottom center;
+            position: absolute;
+            z-index: 100;
+            animation: anim-glass-l 6s linear infinite ;
         }
+        .glass-left::before{
+            position: absolute;
+            top: -34px;
+            left: 7px;
+            width: 12px;
+            height: 14px;
+            background: #67ce6f;
+            border-radius: 50%;
+            box-shadow: inset 1px -2px 0 4px #5ca348;
+            transform: rotate(13deg);
+            z-index: 2;
+        }
+        .glass-left::after{
+            top: 44px;
+            position: absolute;
+            left: -10px;
+            border-bottom: 7px solid #fffff8;
+            border-right: 11px solid transparent;
+            border-left: 11px solid transparent;
+        }
+        .glass-left>div{
+            position: absolute;
+            top: -75px;
+            left: -32px;
+            width: 46px;
+            height: 46px;
+            background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.5) 40%, transparent 40%);
+            transform-origin: bottom left;
+            transform: rotate(45deg);
+            overflow: hidden;
+        }
+        .glass-left>div::after{
+            position: absolute;
+            top: -3px;
+            left: 31px;
+            width: 3px;
+            height: 40px;
+            background: #fef76c;
+            transform: rotate(-23deg);
+            z-index: -1;
+        }
+        .glass-left>div::before{
+            position: absolute;
+            top: 27px;
+            left: 27px;
+            width: 50px;
+            height: 50px;
+            background: #e16858;
+            transform: rotate(45deg);
+            animation: anim-glass-empty 6s linear infinite;
+
+        }
+        @keyframes anim-glass-empty{
+            21.6% { transform: rotate(45deg) translate(0, 0); }
+            22.5% { transform: rotate(49deg) translate(0, 0); }
+            23.4% { transform: rotate(49deg) translate(0, 0); }
+            24.3% { transform: rotate(52deg) translate(0, 0); }
+            27.0% { transform: rotate(52deg) translate(0, 0); }
+            27.9% { transform: rotate(52deg) translate(2px, 0px); }
+            28.8% { transform: rotate(52deg) translate(2px, 0px); }
+            29.7% { transform: rotate(52deg) translate(3px, 0px); }
+            30.6% { transform: rotate(52deg) translate(3px, 0px); }
+            31.5% { transform: rotate(61deg) translate(9px, 0px); }
+            32.4% { transform: rotate(61deg) translate(9px, 0px); }
+            33.3% { transform: rotate(61deg) translate(18px, 0px); }
+            100% { transform: rotate(61deg) translate(18px, 0px); }
+        }
+        /* .insect{
+            width: 25px;
+            height: 15px;
+            background-color: #4c4a40;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            border-radius: 50%;
+            z-index: 1000;
+            transform: scale(.6);
+            animation: anim-insect 6s linear infinite;
+        }
+        .insect>div::after{
+            width: 2px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #4c4a40;
+            position: absolute;
+            transform: rotate(-40deg);
+        }
+        .insect>div::before{
+            width: 2px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #4c4a40;
+            position: absolute;            
+            transform: rotate(90deg);
+        }
+        .insect>div:nth-of-type(1)::after{
+            top: -6px;
+            right: 7px;
+        }
+        .insect>div:nth-of-type(2)::after{
+            top: -6px;
+            right: 17px;
+        }
+        .insect>div:nth-of-type(1)::before{
+            top: -8px;
+            right: 12px;
+        }
+        .insect>div:nth-of-type(2)::before{
+            top: -8px;
+            right: 23px;
+        }
+        .insect>div:nth-of-type(3)::after{
+            top: 13px;
+            right: 6px;
+            transform: rotate(30deg);
+        }
+        .insect>div:nth-of-type(4)::after{
+            top: 13px;
+            right: 17px;
+            transform: rotate(30deg);
+        }
+        .insect>div:nth-of-type(3)::before{
+            top: 16px;
+            right: 11px;
+        }
+        .insect>div:nth-of-type(4)::before{
+            top: 16px;
+            right: 22px;
+        }
+        @keyframes anim-insect{
+            0%{bottom: 20px; left: 50px;}
+            10%{bottom: 20px; left: 50px;}
+            20%{bottom: 20px; left: 50px;}
+            30%{bottom: 20px; left: 50px;z-index: 0;}
+            40%{bottom: 40px; left: 100px;}
+            50%{bottom: 30px; left: 250px;}
+            60%{bottom: 30px; left: 300px;}
+            70%{bottom: 40px; left: 350px;}
+            80%{bottom: 50px; left: 400px;}
+            90%{bottom: 60px; left: 500px;}
+            100%{bottom: 70px; left: 580px;z-index: 0;}
+        } */
         /********************** Room End ********************/
