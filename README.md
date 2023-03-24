@@ -11,7 +11,7 @@ https://user-images.githubusercontent.com/121185931/214777482-602d7e97-4b34-41d7
 
 - ⏲ Created: 2023-01-20
 
-- 💻 Technologies Used: Html , css / without using clip-path or svg
+- 💻 Technologies Used: Html , css / without using clip-path or svg inside code
 
 - 😎 Role : Frontend Developer
 
